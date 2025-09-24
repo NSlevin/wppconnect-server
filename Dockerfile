@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM gcr.io/distroless/nodejs18-debian11 AS base
 WORKDIR /usr/src/wpp-server
 ENV NODE_ENV=production PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 COPY package.json ./
